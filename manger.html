@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./images/logo.png" rel="icon">
     <link href="./css/common.css" rel="stylesheet">
-    <link rel="stylesheet" href="./iconfont.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
     <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     <style>
@@ -25,49 +25,79 @@
         <span class="mdui-typo-title">后台管理页面</span>
         <div class="mdui-toolbar-spacer"></div>
         <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">color_lens</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="iconfont icongithub"></i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" style="line-height: 49px;"><i class="iconfont icongithub" style="font-size: 24px;"></i></a>
     </div>
 </header>
 
 <!--抽屉导航-->
-<div class="mdui-drawer" id="drawer">
-    <ul class="mdui-list">
-        <div class="mdui-col-sm-9 mdui-m-b-3">
-            <div class="mdui-collapse" id="collapse">
-                <div class="mdui-collapse-item" id="item-1">
-                    <div class="mdui-collapse-item-header">
-                        <p>
-                        <li class="mdui-list-item mdui-ripple change" >
-                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color: skyblue">near_me</i>
-                        <div class="mdui-list-item-content">Inbox</div>
-                        <i class="mdui-list-item-icon mdui-icon material-icons" id="change_arrow_direct">keyboard_arrow_down</i>
+           
+                <div class="mdui-drawer" id="drawer">
+                    <ul class="mdui-list">
+                        <div class="mdui-col-sm-9 mdui-m-b-3">
+                            <div class="mdui-collapse" id="collapse">
+                                <div class="mdui-collapse-item" id="item-1">
+                                    <div class="mdui-collapse-item-header">
+                                        <p>
+                                        <li class="mdui-list-item mdui-ripple change" >
+                                            <i class="iconfont iconchazhaobiaodanliebiao"></i>
+                                        <div class="mdui-list-item-content">
+                                           题库清单
+                                        </div>
+                                        <i class="mdui-list-item-icon mdui-icon material-icons" id="change_arrow_direct">keyboard_arrow_down</i>
+                                        </li>
+                                        </p>
+                                    </div>
+                                    <div class="mdui-collapse-item-body">
+                                        <p id="theme1"><a href="#/theme1" class="route">脑筋急转弯</a></p>
+                                        <p id="theme2"><a href="#/theme2" class="route">真心话大冒险</a></p>
+                                        <p id="theme3"><a href="#/theme3" class="route">求生欲</a></p>
+                                    </div>
+                                </div>
+                
+                        <li class="mdui-list-item mdui-ripple">
+                            <i class="iconfont iconyonghuming"></i>
+                            <div class="mdui-list-item-content"><a href="#/user" class="route">用户管理</a></div>
                         </li>
-                        </p>
-                    </div>
-                    <div class="mdui-collapse-item-body">
-                        <p>First content</p>
-                        <p>First content</p>
-                        <p>First content</p>
-                    </div>
-                </div>
-
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">star</i>
-            <div class="mdui-list-item-content">Starred</div>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
-            <div class="mdui-list-item-content">Sent mail</div>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">drafts</i>
-            <div class="mdui-list-item-content">Drafts</div>
-        </li>
-            </div>
-        </div>
-    </ul>
+                        <li class="mdui-list-item mdui-ripple">
+                            <i class="iconfont icongequxinshang"></i>
+                            <div class="mdui-list-item-content"><a href="#/music" class="route">聆听音乐</a></div>
+                        </li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <i class="iconfont icontuichu"></i>
+                            <div class="mdui-list-item-content">退出</div>
+                        </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>   
+    
+<div class="mdui-container doc-container doc-no-cover">
+   <main></main>
 </div>
+<!-- art-template 渲染模板-->
+<script type="text/html" id="Theme1">
+    <div>1</div>
+</script>
+<script type="text/html" id="Theme2">
+    <div>2</div>
+</script>
+<script type="text/html" id="Theme3">
+    <div>3</div>
+</script>
+<script type="text/html" id="user">
+    <p>4</p>
+</script>
+<script type="text/html" id="music">
+    <div>5</div>
+</script>
+
+
+<script src="./js/template-web.js"></script>
 <script src="./js/jquery.min.js"></script>
-<script src="./js/common.js" type="module"></script>
+<script src="./js/router.js"></script>
+<script src="./js/common.js"></script>
+<script>
+    console.log(template('Theme1',{}))
+</script>
 </body>
 </html>

@@ -27,4 +27,14 @@ $(function() {
         count %2 === 0 ? $('#change_arrow_direct').css('transform','rotate(180deg)'):
             $('#change_arrow_direct').css('transform','rotate(0deg)')
     })
+    // 路由的设置
+    let main = document.querySelector('main')
+    let route = [
+        { path: '/user',id:'user'},
+        { path: '/theme1',id:'Theme1'},
+        { path: '/theme2',id: 'Theme2'},
+        { path: '/theme3',id:'Theme3'},
+        { path: '/music',id:'music'}
+    ]
+  let router =  new Router(main,route)
 })

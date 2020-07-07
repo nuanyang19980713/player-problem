@@ -4,6 +4,7 @@
 html{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 :root{
     font-size: calc(100vw/375);
@@ -13,7 +14,7 @@ html>body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #EDEDED;
+    background: snow;
     user-select: none;
 }
 #title{
@@ -72,13 +73,45 @@ footer> #bottom li{
 #drawer{
     top: 60px;
     background: #ffffff;
+    box-shadow: 0 0 4px #ffffff;
+    position: fixed;
 }
 .mdui-list {
     padding: 0;
 }
 .mdui-collapse-item-body {
-    padding: 0 50px;
+    padding: 0px;
+    width: 128%;
+}
+.mdui-collapse-item-body p {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 15px 54px;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+.mdui-collapse-item-body p:hover {
+   background-color: silver;
+   cursor: pointer;
 }
 #change_arrow_direct {
     transition: all 0.4s;
+}
+.mdui-list-item-content {
+    padding: 10px 20px;
+    font-size: 20px !important;
+}
+.iconfont {
+    font-size: 21px!important;
+}
+header{
+    overflow: hidden;
+    height: 56px;
+}
+.doc-no-cover {
+    margin-top: 10px;
+    left: 67rem;
+    height: 650px;
+    position: fixed;
 }
