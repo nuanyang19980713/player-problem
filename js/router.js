@@ -1,13 +1,13 @@
 class Router{
     constructor(pos,route) {
-        this.current = '#/user'
+        this.current = '#/home'
         this.pos = pos
         this.route = route
         this.init()
     }
     init() {
         location.hash = this.gethash()
-        this.pos.innerHTML = template('user',{})
+        this.pos.innerHTML = template('home',{})
        this.wathchHash() 
     }
     wathchHash() {
@@ -22,7 +22,10 @@ class Router{
     }
     render(router) {      
        let res = router.find(item => item.path === this.gethash())
-        this.pos.innerHTML = ''
-        this.pos.innerHTML = template(res.id,{})
+        if (res) {
+            this.pos.innerHTML = ''
+            this.pos.innerHTML = template(res.id,{})
+        }
+
     }
 }

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>后台管理页面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./images/logo.png" rel="icon">
+    <link href="./css/home.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./font/iconfont.css">
     <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
@@ -16,6 +19,8 @@
             }
         }
 
+
+
     </style>
 </head>
 <body>
@@ -24,14 +29,20 @@
         <a href="javascript:;" class="mdui-btn mdui-btn-icon drawer"><i class="mdui-icon material-icons">menu</i></a>
         <span class="mdui-typo-title">后台管理页面</span>
         <div class="mdui-toolbar-spacer"></div>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">color_lens</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon" style="line-height: 49px;"><i class="iconfont icongithub" style="font-size: 24px;"></i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="change_theme"><i class="mdui-icon material-icons">color_lens</i></a>
+        <a href="https://github.com/nuanyang19980713/player-problem/tree/fb2224ac5eff4319558b0cc42c7c20ed4ba424d9" class="mdui-btn mdui-btn-icon github" id="toGithub"style="line-height: 49px;"><i class="iconfont icongithub" style="font-size: 24px!important;"></i></a>
     </div>
 </header>
 
 <!--抽屉导航-->
            
                 <div class="mdui-drawer" id="drawer">
+                    <header id="head">
+                        <div class="vator">
+                            <img src="http://img0.imgtn.bdimg.com/it/u=3256100974,305075936&fm=26&gp=0.jpg" alt="">
+                        </div>
+                        <p class="username">nuanyang</p>
+                    </header>
                     <ul class="mdui-list">
                         <div class="mdui-col-sm-9 mdui-m-b-3">
                             <div class="mdui-collapse" id="collapse">
@@ -43,26 +54,26 @@
                                         <div class="mdui-list-item-content">
                                            题库清单
                                         </div>
-                                        <i class="mdui-list-item-icon mdui-icon material-icons" id="change_arrow_direct">keyboard_arrow_down</i>
+                                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:snow;" id="change_arrow_direct">keyboard_arrow_down</i>
                                         </li>
                                         </p>
                                     </div>
                                     <div class="mdui-collapse-item-body">
-                                        <p id="theme1"><a href="#/theme1" class="route">脑筋急转弯</a></p>
-                                        <p id="theme2"><a href="#/theme2" class="route">真心话大冒险</a></p>
-                                        <p id="theme3"><a href="#/theme3" class="route">求生欲</a></p>
+                                        <p class="tab"><a href="#/theme1" class="route">脑筋急转弯</a></p>
+                                        <p class="tab"><a href="#/theme2" class="route">真心话大冒险</a></p>
+                                        <p class="tab"><a href="#/theme3" class="route">求生欲</a></p>
                                     </div>
                                 </div>
                 
-                        <li class="mdui-list-item mdui-ripple">
+                        <li class="mdui-list-item mdui-ripple tab">
                             <i class="iconfont iconyonghuming"></i>
                             <div class="mdui-list-item-content"><a href="#/user" class="route">用户管理</a></div>
                         </li>
-                        <li class="mdui-list-item mdui-ripple">
+                        <li class="mdui-list-item mdui-ripple tab">
                             <i class="iconfont icongequxinshang"></i>
-                            <div class="mdui-list-item-content"><a href="#/music" class="route">聆听音乐</a></div>
+                            <div class="mdui-list-item-content" ><a href="#/music" class="route">聆听音乐</a></div>
                         </li>
-                        <li class="mdui-list-item mdui-ripple">
+                        <li class="mdui-list-item mdui-ripple tab">
                             <i class="iconfont icontuichu"></i>
                             <div class="mdui-list-item-content">退出</div>
                         </li>
@@ -72,7 +83,7 @@
                 </div>   
     
 <div class="mdui-container doc-container doc-no-cover">
-   <main></main>
+   <main style="height:100%;overflow: scroll;width:90%;"></main>
 </div>
 <!-- art-template 渲染模板-->
 <script type="text/html" id="Theme1">
@@ -85,19 +96,99 @@
     <div>3</div>
 </script>
 <script type="text/html" id="user">
-    <p>4</p>
+  <header>
+      <ol class="breadcrumb">
+      <li><a href="#/home">首页</a></li>
+      <li class="active">用户列表</li>
+  </ol></header>
 </script>
 <script type="text/html" id="music">
     <div>5</div>
 </script>
+<!--绘制主页面-->
+<script type="text/html" id="home">
+    <header>
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+        </ol></header>
+    <div class="home_container">
+        <aside class="home_left">
+            <div class="home_nav">
+                <div class="home_item">
+                    <div class="item_name">
+                       <h5>新用户</h5>
+                        <div>286</div>
+                    </div>
+                    <div class="item_img" style="background: #F68573;">
+                        <i class="iconfont iconyonghuming"></i>
+                    </div>
+                </div>
+                <div class="home_item" >
+                    <div class="item_name">
+                        <h5>脑筋急转弯</h5>
+                        <div>3286</div>
+                    </div>
+                    <div class="item_img" style="background:#B0C686;">
+                        <i class="fa fa-cubes" style="line-height: 49px;"></i>
+                    </div>
+                </div>
+                <div class="home_item">
+                    <div class="item_name">
+                        <h5>用户总数</h5>
+                        <div>1286</div>
+                    </div>
+                    <div class="item_img" style="background:#BF89AF;line-height: 64px;">
+                        <i class="fa fa-users"></i>
+                    </div>
+                </div>
 
+                <div class="home_item">
+                    <div class="item_name">
+                        <h5>目前管理员</h5>
+                        <div>1</div>
+                    </div>
+                    <div class="item_img" style="background:#68ADE1;">
+                        <i class="iconfont iconquanxian"></i>
+                    </div>
+                </div>
+                <div class="home_item" >
+                    <div class="item_name">
+                        <h5>真心话冒险</h5>
+                        <div>3286</div>
+                    </div>
+                    <div class="item_img" style="background:#B0C686;">
+                        <i class="fa fa-cubes" style="line-height: 49px;"></i>
+                    </div>
+                </div>
+                <div class="home_item" >
+                    <div class="item_name">
+                        <h5>求生欲测试</h5>
+                        <div>3286</div>
+                    </div>
+                    <div class="item_img" style="background:#B0C686;">
+                        <i class="fa fa-cubes" style="line-height: 49px;"></i>
+                    </div>
+                </div>
 
+            </div>
+            <div class="home_footer"></div>
+        </aside>
+        <aside class="home_right"></aside>
+    </div>
+</script>
+
+<!--修改页面的色调-->
+<div class="mdui-dialog" id="theme_dialog">
+    <div class="mdui-dialog-content">
+        <div class="mdui-dialog-title">设置文档主题</div>
+    </div>
+    <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple ok">ok</button>
+    </div>
+</div>
 <script src="./js/template-web.js"></script>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/router.js"></script>
 <script src="./js/common.js"></script>
-<script>
-    console.log(template('Theme1',{}))
-</script>
 </body>
 </html>

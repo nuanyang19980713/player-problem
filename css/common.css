@@ -14,7 +14,7 @@ html>body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background: snow;
+    background: #EFEEF1;
     user-select: none;
 }
 #title{
@@ -71,10 +71,12 @@ footer> #bottom li{
     background-color: #3f51b5!important;
 }
 #drawer{
-    top: 60px;
-    background: #ffffff;
-    box-shadow: 0 0 4px #ffffff;
+    top: 56px;
+    background: #2C3C56;
+    color: #ffffff;
+    letter-spacing: 2px;
     position: fixed;
+
 }
 .mdui-list {
     padding: 0;
@@ -91,10 +93,6 @@ footer> #bottom li{
     box-sizing: border-box;
     margin-top: -10px;
 }
-.mdui-collapse-item-body p:hover {
-   background-color: silver;
-   cursor: pointer;
-}
 #change_arrow_direct {
     transition: all 0.4s;
 }
@@ -110,8 +108,33 @@ header{
     height: 56px;
 }
 .doc-no-cover {
-    margin-top: 10px;
-    left: 67rem;
+    margin-top: 7px;
+    left: 20.5rem;
     height: 650px;
     position: fixed;
+}
+.current{
+    background: #3f51b5;
+}
+#head{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+#head p {
+   margin-top: 10px;
+}
+.vator{
+    text-align: center;
+}
+.vator img{
+    width: 50%;
+    border-radius: 50%;
+}
+.mdui-col-sm-9{
+    padding: 0!important;
+}
+.username{
+    text-align: center;
 }
