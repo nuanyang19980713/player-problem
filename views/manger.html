@@ -6,11 +6,11 @@
     <title>后台管理页面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./images/logo.png" rel="icon">
-    <link href="./css/home.css" rel="stylesheet">
-    <link href="./css/common.css" rel="stylesheet">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./font/iconfont.css">
+    <link href="../images/logo.png" rel="icon">
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     <style>
@@ -189,36 +189,11 @@
         <button class="mdui-btn mdui-ripple ok">ok</button>
     </div>
 </div>
-<script src="./js/template-web.js"></script>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/router.js"></script>
-<script src="./js/common.js"></script>
-<script src="./js/echarts.min.js"></script>
-<script>
-    setTimeout(_=>{
-        let chart_container = document.querySelector('#chart')
-        let myEchart = echarts.init(chart_container)
-        var option = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
-        myEchart.setOption(option);
-    },200)
-
-</script>
+<script src="../js/template-web.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/router.js"></script>
+<script src="../js/manger.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="./js/home.js"></script>
 </body>
 </html>
