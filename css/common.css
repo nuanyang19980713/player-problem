@@ -4,7 +4,6 @@
 html{
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 :root{
     font-size: calc(100vw/375);
@@ -104,14 +103,13 @@ footer> #bottom li{
     font-size: 21px!important;
 }
 header{
-    overflow: hidden;
     height: 56px;
 }
 .doc-no-cover {
     margin-top: 7px;
     left: 20.5rem;
-    height: 650px;
     position: fixed;
+    height: auto;
 }
 .current{
     background: #3f51b5;
